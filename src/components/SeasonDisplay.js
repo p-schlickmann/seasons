@@ -5,17 +5,9 @@ import Hot from './Hot'
 
 function getSeason(lat, month) {
     if (8 >= month >= 3) {
-        if (lat >= 0) {
-            return <Hot/>
-        } else {
-            return <Cold/>
-        }
+        return lat >= 0 ? <Cold/> : <Hot/>
     } else if (2 >= month >= 0 || 12 >= month >= 9 ){
-        if (lat <=0 ){
-            return <Cold/>
-        } else {
-            return <Hot/>
-        }
+        return lat >= 0 ? <Hot/> : <Cold/>
     }
      else {
         return null
